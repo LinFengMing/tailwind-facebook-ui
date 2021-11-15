@@ -212,3 +212,82 @@ function renderRingtBlock() {
 }
 
 renderRingtBlock();
+// 限時動態相關
+const storyList = document.getElementById("story-list");
+
+function renderStoryItem() {
+  for (let i = 0; i < 5; i++) {
+    const divBox = document.createElement("div");
+    divBox.classList.add(
+      "flex-1",
+      "px-[4px]",
+      "min-w-[120px]",
+      "cursor-pointer"
+    );
+    divBox.innerHTML = `
+      <div id="story-${i}" class="relative overflow-hidden">
+        <div id="story-mask-${i}" class="hidden absolute w-full h-full top-0 left-0 bg-black/20 z-20"></div>
+
+        <div
+          class="
+            w-[32px]
+            h-[32px]
+            absolute
+            top-4
+            left-4
+            ring-4
+            ring-fb
+            bg-fb-card
+            rounded-full
+            flex
+            justify-center
+            items-center
+            z-30
+          "
+        >
+          <p class="text-white text-sm">布</p>
+        </div>
+
+        <div
+          class="
+            absolute
+            w-full
+            h-full
+            top-0
+            left-0
+            bg-gradient-to-b
+            from-black/30
+            to-transparent
+            z-20
+          "
+        ></div>
+
+        <img
+          id="story-image-${i}"
+          src="https://bruce-fe-fb.web.app/image/story.png"
+          class="w-full h-full duration-200"
+        />
+
+        <p class="absolute bottom-2 left-2 text-white z-10">布魯斯</p>
+      </div>
+    `;
+
+    storyList.appendChild(divBox);
+
+    divBox.addEventListener("mouseover", () => {
+      const mask = document.getElementById(`story-mask-${i}`);
+      const image = document.getElementById(`story-image-${i}`);
+      mask.classList.remove("hidden");
+      image.classList.add("scale-105");
+    });
+
+    divBox.addEventListener("mouseout", () => {
+      const mask = document.getElementById(`story-mask-${i}`);
+      const image = document.getElementById(`story-image-${i}`);
+      mask.classList.add("hidden");
+      image.classList.remove("scale-105");
+    });
+  }
+}
+
+renderStoryItem();
