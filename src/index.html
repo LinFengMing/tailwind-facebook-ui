@@ -328,7 +328,7 @@
         "
       ></div>
       <!-- 動態牆 -->
-      <div class="max-w-[744px] w-full mx-auto px-4">
+      <div class="max-w-[744px] w-full mx-auto px-4 pb-4">
         <!-- 限時動態 -->
         <div class="relative">
           <div id="story-list" class="flex overflow-x-auto no-scrollbar">
@@ -380,7 +380,7 @@
               popover-btn
               -right-3
               top-[calc(50%-22.5px)]
-              z-10
+              z-30
               w-[45px]
               h-[45px]
             "
@@ -569,9 +569,9 @@
                 </div>
 
                 <p class="text-gray-400 text-sm pl-1.5">讚</p>
-            </button>
+              </button>
 
-            <button
+              <button
                 class="
                   flex-1
                   h-[40px]
@@ -587,9 +587,9 @@
                 </div>
 
                 <p class="text-gray-400 text-sm pl-1.5">留言</p>
-            </button>
+              </button>
 
-            <button
+              <button
                 class="
                   flex-1
                   h-[40px]
@@ -605,9 +605,33 @@
                 </div>
 
                 <p class="text-gray-400 text-sm pl-1.5">分享</p>
-            </button>
+              </button>
             </div>
           </div>
+        </div>
+        <!-- 貼文牆 (Loading) -->
+        <div class="card pb-0 px-0 animate-pulse">
+          <!-- 貼文標題 -->
+          <div class="flex px-4 items-center mb-4">
+            <div
+              class="
+                w-[44px]
+                h-[44px]
+                rounded-full
+                overflow-hidden
+                mr-3
+                bg-fb-input
+              "
+            ></div>
+
+            <div class="flex content-evenly flex-wrap w-[200px] h-[50px]">
+              <div class="bg-fb-input w-[200px] h-[16px] rounded-full"></div>
+
+              <div class="bg-fb-input w-[100px] h-[12px] rounded-full"></div>
+            </div>
+          </div>
+
+          <div class="bg-fb-input w-full h-[260px]"></div>
         </div>
       </div>
       <!-- 右側聯絡人 -->
