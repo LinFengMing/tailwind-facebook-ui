@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook UI</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
 
   <body class="bg-fb-bg">
@@ -453,44 +457,33 @@
         </div>
         <!-- 開包廂 -->
         <div class="card pr-0 flex">
-          <button
-            class="
-              mr-4
-              px-4
-              h-[40px]
-              ring-2 ring-gray-600
-              flex
-              items-center
-              rounded-full
-              focus:outline-none
-            "
-          >
-            <div class="w-[24px]">
-              <img src="https://bruce-fe-fb.web.app/image/video.svg" />
-            </div>
+          <!-- Swiper -->
+          <div class="swiper fb-live">
+            <div id="swiper-wrapper-live" class="swiper-wrapper">
+              <div class="swiper-slide">
+                <button
+                  class="
+                    mr-4
+                    px-4
+                    h-[40px]
+                    ring-2 ring-gray-600
+                    flex
+                    items-center
+                    rounded-full
+                    focus:outline-none
+                  "
+                >
+                  <div class="w-[24px]">
+                    <img src="https://bruce-fe-fb.web.app/image/video.svg" />
+                  </div>
 
-            <p class="ml-2 text-fb text-sm font-bold">建立包廂</p>
-          </button>
-
-          <div class="w-[55px]">
-            <div class="relative w-[40px] cursor-pointer">
-              <div class="overflow-hidden rounded-full">
-                <img src="https://bruce-fe-fb.web.app/image/avator.png" />
+                  <p class="ml-2 text-fb text-sm font-bold">建立包廂</p>
+                </button>
               </div>
-
-              <div
-                class="
-                  w-[10px]
-                  h-[10px]
-                  rounded-full
-                  bg-green-500
-                  absolute
-                  bottom-0
-                  right-0
-                  ring-gray-900 ring
-                "
-              ></div>
             </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </div>
@@ -501,6 +494,7 @@
       ></div>
     </main>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
